@@ -1,11 +1,11 @@
 import Header from './components/Header';
-import Start from './components/Start';
+import NoUser from './components/NoUser';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Start />
+      <NoUser />
     </div>
   );
 }
