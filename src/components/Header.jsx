@@ -1,7 +1,13 @@
 import React from 'react';
+import SeachForm from './SearchForm';
 
 function Header() {
-  return <div>Header</div>;
+  return (
+    <div className="">
+      <div className="" />
+      <SeachForm />
+    </div>
+  );
 }
 
 export default Header;

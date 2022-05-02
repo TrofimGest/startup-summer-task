@@ -1,7 +1,9 @@
+import Header from './components/Header';
+
 function App() {
   return (
     <div className="App">
-      <h1 className="v">Startup Summer Task</h1>
+      <Header />
     </div>
   );
 }
