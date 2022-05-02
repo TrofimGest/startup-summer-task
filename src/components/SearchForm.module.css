@@ -1,0 +1,28 @@
+.search {
+  background-color: white;
+  width: 500px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.icon {
+  border: none;
+  background-color: transparent;
+  background-image: url(../assets/icons/search.svg);
+  width: 14px;
+  height: 14px;
+  margin-left: 19px;
+  margin-right: 13px;
+  background-size: cover;
+}
+
+.input {
+  border: none;
+  outline: none;
+}

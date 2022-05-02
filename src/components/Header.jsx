@@ -1,12 +1,13 @@
 import React from 'react';
 import SeachForm from './SearchForm';
+import styles from './Header.module.css';
 
 function Header() {
   return (
-    <div className="">
-      <div className="" />
+    <header className={styles.header}>
+      <div className={styles.logo} />
       <SeachForm />
-    </div>
+    </header>
   );
 }
 

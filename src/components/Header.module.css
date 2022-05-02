@@ -1,0 +1,15 @@
+.header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  background: #0064eb;
+}
+
+.logo {
+  background-image: url(../assets/icons/github.svg);
+  width: 41px;
+  height: 40px;
+  margin-left: 41px;
+  margin-right: 22px;
+  background-size: cover;
+}
