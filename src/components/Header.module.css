@@ -9,7 +9,6 @@
   background-image: url(../assets/icons/github.svg);
   width: 41px;
   height: 40px;
-  margin-left: 41px;
-  margin-right: 22px;
+  margin: 16px 22px 16px 41px;
   background-size: cover;
 }
