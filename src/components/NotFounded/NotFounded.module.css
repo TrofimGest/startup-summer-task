@@ -9,7 +9,7 @@
 }
 
 .logo {
-  background-image: url(../assets/icons/user.svg);
+  background-image: url(/src/assets/icons/user.svg);
   width: 65px;
   height: 75px;
   background-size: cover;

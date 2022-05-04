@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './NoUser.module.css';
+import styles from './NotFounded.module.css';
 
-function NoUser() {
+function NotFounded() {
   return (
     <section className={styles.nouser}>
       <div className={styles.logo} />
@@ -10,4 +10,4 @@ function NoUser() {
   );
 }
 
-export default NoUser;
+export default NotFounded;
