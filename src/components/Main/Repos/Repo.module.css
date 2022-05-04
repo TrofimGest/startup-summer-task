@@ -1,0 +1,26 @@
+.repo {
+  padding: 24px 56px 24px 32px;
+  margin-top: 24px;
+  background-color: #fff;
+  width: 877px;
+}
+
+.repo:first-child {
+  margin-top: auto;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.title a {
+  color: #0064eb;
+  text-decoration: none;
+}
+
+.subtitle {
+  line-height: 19px;
+  margin-top: 16px;
+}

@@ -12,7 +12,7 @@ function Profile() {
       <div className={styles.name}>Gest Trafim</div>
       <div className={styles.login}>
         <a href="https://github.com/TrofimGest" rel="noreferrer" target="_blank">
-          TrofimGest
+          trofimgest
         </a>
       </div>
       <div className={styles.follows}>

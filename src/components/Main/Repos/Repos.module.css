@@ -1,0 +1,13 @@
+.container {
+  margin: 28px 0 0 66px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+}
+
+.repos {
+  margin-top: 29px;
+}
