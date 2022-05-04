@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import githubLogo from '../../assets/icons/github.svg';
 import searchIcon from '../../assets/icons/search.svg';
+import githubApi from '../../services/api';
 import styles from './Header.module.css';
 
 function Header() {
   const [username, setUsername] = useState('');
+
+  async function fetchUser(user) {
+    const response = await githubApi(user);
+    console.log(response);
+  }
 
   const handleChange = (e) => {
     setUsername(e.target.value);
@@ -12,7 +18,7 @@ function Header() {
 
   const handleEnter = (e) => {
     if (e.keyCode === 13) {
-      console.log(username);
+      fetchUser(username);
     }
   };
 
