@@ -1,11 +1,11 @@
 import Header from './components/Header/Header';
-import NotFounded from './components/NotFounded/NotFounded';
+import Main from './components/Main/Main';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <NotFounded />
+      <Main />
     </div>
   );
 }

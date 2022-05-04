@@ -1,0 +1,67 @@
+.container {
+  margin-left: 57px;
+}
+
+.avatar {
+  width: 280px;
+  height: 280px;
+  margin-top: 39px;
+}
+
+.avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 130%;
+  margin-top: 29px;
+}
+
+.login {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 12px;
+}
+
+.login a {
+  text-decoration: none;
+  color: #0064eb;
+}
+
+.follows {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  display: flex;
+  margin-top: 25px;
+}
+
+.followers {
+  display: flex;
+  align-items: center;
+  width: 163px;
+}
+
+.followers_img {
+  background: url(/src/assets/icons/group.svg) no-repeat;
+  width: 16.06px;
+  height: 16px;
+  background-size: 16.06px 16px;
+}
+
+.following {
+  display: flex;
+  align-items: center;
+  width: 150px;
+}
+
+.following_img {
+  background-image: url(/src/assets/icons/person.svg);
+  width: 22.08px;
+  height: 14px;
+  background-size: 22.08px 14px;
+}
