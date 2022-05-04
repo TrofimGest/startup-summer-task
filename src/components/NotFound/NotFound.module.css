@@ -1,4 +1,4 @@
-.nouser {
+.not-found {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,10 +9,8 @@
 }
 
 .logo {
-  background-image: url(/src/assets/icons/user.svg);
   width: 65px;
   height: 75px;
-  background-size: cover;
 }
 
 .text {

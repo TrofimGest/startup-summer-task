@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import githubLogo from '../../assets/icons/github.svg';
+import searchIcon from '../../assets/icons/search.svg';
 import styles from './Header.module.css';
 
 function Header() {
@@ -16,9 +18,13 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo} />
+      <div>
+        <img className={styles.logo} src={githubLogo} alt="github logo" />
+      </div>
       <div className={styles.search}>
-        <div className={styles.icon} />
+        <div className={styles['icon-container']}>
+          <img className={styles.icon} src={searchIcon} alt="search icon" />
+        </div>
         <input
           type="search"
           value={username}

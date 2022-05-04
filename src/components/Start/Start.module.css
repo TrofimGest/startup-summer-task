@@ -9,11 +9,8 @@
 }
 
 .logo {
-  background-image: url(../assets/icons/search.svg);
   width: 64.17px;
   height: 64.17px;
-  background-size: cover;
-
 }
 
 .text {
