@@ -7,7 +7,7 @@ function Profile({ data }) {
   return (
     <div className={styles.container}>
       <div className={styles.avatar}>
-        <img src={data.user.avatar_url} alt="avatar" />
+        <img src="https://avatars.githubusercontent.com/u/73033225?v=4" alt="avatar" />
       </div>
       <div className={styles.name}>Gest Trafim</div>
       <div className={styles.login}>
