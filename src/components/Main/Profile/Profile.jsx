@@ -3,11 +3,11 @@ import followersIcon from '../../../assets/icons/followers.svg';
 import followingIcon from '../../../assets/icons/following.svg';
 import styles from './Profile.module.css';
 
-function Profile() {
+function Profile({ data }) {
   return (
     <div className={styles.container}>
       <div className={styles.avatar}>
-        <img src="https://avatars.githubusercontent.com/u/73033225?v=4" alt="avatar" />
+        <img src={data.user.avatar_url} alt="avatar" />
       </div>
       <div className={styles.name}>Gest Trafim</div>
       <div className={styles.login}>

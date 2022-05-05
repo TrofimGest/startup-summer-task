@@ -5,10 +5,11 @@ import getUser from './services/api';
 
 function App() {
   const [username, setUsername] = useState('');
+  const [profile, setProfile] = useState();
 
   async function fetchUser() {
     const response = await getUser(username);
-    return response;
+    setProfile(response);
   }
 
   const handleEnter = (e) => {
@@ -20,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Header username={username} setUsername={setUsername} handleEnter={handleEnter} />
-      <Main data={() => fetchUser()} />
+      <Main data={profile} />
     </div>
   );
 }
