@@ -3,11 +3,11 @@ import Profile from './Profile/Profile';
 import Repos from './Repos/Repos';
 import styles from './Main.module.css';
 
-function Main({ data }) {
+function Main({ profileData, reposData }) {
   return (
     <div className={styles.container}>
-      <Profile data={data} />
-      <Repos />
+      <Profile profileData={profileData} />
+      <Repos profileData={profileData} reposData={reposData} />
     </div>
   );
 }

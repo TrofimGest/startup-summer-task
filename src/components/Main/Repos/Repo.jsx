@@ -1,18 +1,15 @@
 import React from 'react';
 import styles from './Repo.module.css';
 
-function Repo() {
+function Repo({ repo }) {
   return (
     <div className={styles.repo}>
       <div className={styles.title}>
-        <a
-          href="https://github.com/TrofimGest/startup-summer-task"
-          rel="noreferrer"
-          target="_blank">
-          startup-summer-task
+        <a href={repo.html_url} rel="noreferrer" target="_blank">
+          {repo.name}
         </a>
       </div>
-      <div className={styles.subtitle}>No description</div>
+      <div className={styles.subtitle}>{repo.description || ''}</div>
     </div>
   );
 }

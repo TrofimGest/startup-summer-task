@@ -3,17 +3,17 @@ import followersIcon from '../../../assets/icons/followers.svg';
 import followingIcon from '../../../assets/icons/following.svg';
 import styles from './Profile.module.css';
 
-function Profile({ data }) {
-  console.log(data);
+function Profile({ profileData }) {
+  console.log(profileData);
   return (
     <div className={styles.container}>
       <div className={styles.avatar}>
-        <img src={data.avatar_url} alt="avatar" />
+        <img src={profileData.avatar_url} alt="avatar" />
       </div>
-      <div className={styles.name}>{data.name}</div>
+      <div className={styles.name}>{profileData.name}</div>
       <div className={styles.login}>
         <a href="https://github.com/TrofimGest" rel="noreferrer" target="_blank">
-          {data.login}
+          {profileData.login}
         </a>
       </div>
       <div className={styles.follows}>
@@ -21,13 +21,13 @@ function Profile({ data }) {
           <div className={styles['icon-container']}>
             <img className={styles['followers-img']} src={followersIcon} alt="followers icon" />
           </div>
-          <p>{data.followers} followers</p>
+          <p>{profileData.followers} followers</p>
         </div>
         <div className={styles.following}>
           <div className={styles['icon-container']}>
             <img className={styles['following-img']} src={followingIcon} alt="following icon" />
           </div>
-          <p>{data.following} following</p>
+          <p>{profileData.following} following</p>
         </div>
       </div>
     </div>

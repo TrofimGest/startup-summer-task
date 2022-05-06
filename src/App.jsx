@@ -8,6 +8,7 @@ import { getUser, getRepos } from './services/api';
 function App() {
   const [username, setUsername] = useState('');
   const [profile, setProfile] = useState();
+  const [repos, setRepos] = useState();
   const history = useNavigate();
 
   async function fetchUser() {
@@ -18,6 +19,7 @@ function App() {
 
   async function fetchRepos() {
     const response = await getRepos(username);
+    setRepos(response);
     console.log(response);
   }
 
@@ -33,7 +35,7 @@ function App() {
       <Header username={username} setUsername={setUsername} handleEnter={handleEnter} />
       <Routes>
         <Route path="/" element={<Start />} />
-        <Route path="/user" element={<Main data={profile} />} />
+        <Route path="/user" element={<Main profileData={profile} reposData={repos} />} />
       </Routes>
     </div>
   );
