@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Start from './components/Start/Start';
-import getUser from './services/api';
+import { getUser, getRepos } from './services/api';
 
 function App() {
   const [username, setUsername] = useState('');
@@ -16,9 +16,15 @@ function App() {
     history('/user');
   }
 
+  async function fetchRepos() {
+    const response = await getRepos(username);
+    console.log(response);
+  }
+
   const handleEnter = (e) => {
     if (e.keyCode === 13) {
       fetchUser(username);
+      fetchRepos(username);
     }
   };
 
