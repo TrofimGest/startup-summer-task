@@ -9,7 +9,7 @@ function Repo({ repo }) {
           {repo.name}
         </a>
       </div>
-      <div className={styles.subtitle}>{repo.description || ''}</div>
+      <div className={styles.subtitle}>{repo.description || 'No description'}</div>
     </div>
   );
 }

@@ -13,6 +13,7 @@ function App() {
 
   async function fetchUser() {
     const response = await getUser(username);
+    console.log(response);
     setProfile(response);
     history('/user');
   }
@@ -20,7 +21,6 @@ function App() {
   async function fetchRepos() {
     const response = await getRepos(username);
     setRepos(response);
-    console.log(response);
   }
 
   const handleEnter = (e) => {
