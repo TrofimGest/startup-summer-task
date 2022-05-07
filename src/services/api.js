@@ -1,7 +1,6 @@
 import axios from 'axios';
-import env from 'react-dotenv';
 
-const token = env.GITHUB_TOKEN;
+const token = process.env.REACT_APP_GITHUB_TOKEN;
 
 export async function getUser(username) {
   const response = await axios
