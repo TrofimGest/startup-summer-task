@@ -10,7 +10,7 @@ function Profile({ profileData }) {
       <div className={styles.avatar}>
         <img src={profileData.avatar_url} alt="avatar" />
       </div>
-      <div className={styles.name}>{profileData.name}</div>
+      <div className={styles.name}>{profileData.name || 'No Name'}</div>
       <div className={styles.login}>
         <a href="https://github.com/TrofimGest" rel="noreferrer" target="_blank">
           {profileData.login}

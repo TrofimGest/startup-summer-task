@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './Repos.module.css';
 import Repo from './Repo';
+import ReposNotFound from '../../ReposNotFound/ReposNotFound';
 
 function Repos({ profileData, reposData }) {
   if (profileData.public_repos === 0) {
-    return <h1>User not found</h1>;
+    return <ReposNotFound />;
   }
   return (
     <div className={styles.container}>

@@ -1,0 +1,23 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 72px);
+  row-gap: 42px;
+  margin-left: 25px;
+}
+
+.logo {
+  width: 76px;
+  height: 62px;
+}
+
+.text {
+  width: 243px;
+  text-align: center;
+  color: #808080;
+  font-size: 22px;
+  line-height: 140%;
+}
