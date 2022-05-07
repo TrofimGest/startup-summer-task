@@ -1,3 +1,3 @@
 window.env = {
-  "GITHUB_TOKEN": "'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';"
+  "GITHUB_TOKEN": "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"
 };

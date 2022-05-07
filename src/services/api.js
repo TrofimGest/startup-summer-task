@@ -7,10 +7,11 @@ export async function getUser(username) {
   const response = await axios
     .get(`https://api.github.com/users/${username}`, {
       headers: {
-        Authorization: { token }
+        Authorization: token
       }
     })
     .catch((error) => {
+      console.log(error);
       return error.response;
     });
   return response;
@@ -20,7 +21,7 @@ export async function getRepos(username) {
   const response = await axios
     .get(`https://api.github.com/users/${username}/repos`, {
       headers: {
-        Authorization: { token }
+        Authorization: token
       }
     })
     .catch((error) => {
