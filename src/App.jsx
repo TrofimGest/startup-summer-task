@@ -13,7 +13,6 @@ function App() {
 
   async function fetchUser() {
     const response = await getUser(username);
-    console.log(response);
     setProfile(response);
     history('/user');
   }

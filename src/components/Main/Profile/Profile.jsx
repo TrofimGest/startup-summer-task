@@ -4,7 +4,6 @@ import followingIcon from '../../../assets/icons/following.svg';
 import styles from './Profile.module.css';
 
 function Profile({ profileData }) {
-  console.log(profileData);
   return (
     <div className={styles.container}>
       <div className={styles.avatar}>
@@ -12,7 +11,7 @@ function Profile({ profileData }) {
       </div>
       <div className={styles.name}>{profileData.name || 'No Name'}</div>
       <div className={styles.login}>
-        <a href="https://github.com/TrofimGest" rel="noreferrer" target="_blank">
+        <a href={profileData.html_url} rel="noreferrer" target="_blank">
           {profileData.login}
         </a>
       </div>
