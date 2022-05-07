@@ -11,7 +11,6 @@ export async function getUser(username) {
       }
     })
     .catch((error) => {
-      console.log(error);
       return error.response;
     });
   return response;
