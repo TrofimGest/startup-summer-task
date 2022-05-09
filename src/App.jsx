@@ -24,8 +24,12 @@ function App() {
 
   const handleEnter = (e) => {
     if (e.keyCode === 13) {
-      fetchUser(username);
-      fetchRepos(username);
+      if (username !== '') {
+        fetchUser(username);
+        fetchRepos(username);
+      } else {
+        history('/');
+      }
     }
   };
 
