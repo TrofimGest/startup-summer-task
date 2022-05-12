@@ -9,6 +9,7 @@ function App() {
   const [username, setUsername] = useState('');
   const [profile, setProfile] = useState();
   const [repos, setRepos] = useState();
+  const [page, setPage] = useState(1);
   const history = useNavigate();
 
   async function fetchUser() {
@@ -18,27 +19,36 @@ function App() {
   }
 
   async function fetchRepos() {
-    const response = await getRepos(username);
+    const response = await getRepos(username, page);
     setRepos(response);
   }
 
-  const handleEnter = (e) => {
+  const searchResult = (e) => {
     if (e.keyCode === 13) {
       if (username !== '') {
+        setPage(1);
         fetchUser(username);
-        fetchRepos(username);
+        fetchRepos(username, page);
       } else {
         history('/');
       }
     }
   };
 
+  const searchByPage = (e) => {
+    setPage(e.selected + 1);
+    fetchRepos(username, page);
+  };
+
   return (
     <div className="App">
-      <Header username={username} setUsername={setUsername} handleEnter={handleEnter} />
+      <Header username={username} setUsername={setUsername} searchResult={searchResult} />
       <Routes>
         <Route path="/" element={<Start />} />
-        <Route path="/user" element={<Main profileData={profile} reposData={repos} />} />
+        <Route
+          path="/user"
+          element={<Main profileData={profile} reposData={repos} searchByPage={searchByPage} />}
+        />
       </Routes>
     </div>
   );

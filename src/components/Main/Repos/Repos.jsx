@@ -4,7 +4,10 @@ import styles from './Repos.module.css';
 import Repo from './Repo';
 import ReposNotFound from '../../ReposNotFound/ReposNotFound';
 
-function Repos({ profileData, reposData }) {
+function Repos({ profileData, reposData, searchByPage }) {
+  // count number of pages for pagination
+  const pageCount = Math.ceil(profileData.public_repos / 4);
+
   if (profileData.public_repos === 0) {
     return <ReposNotFound />;
   }
@@ -20,7 +23,8 @@ function Repos({ profileData, reposData }) {
       <ReactPaginate
         previousLabel="<"
         nextLabel=">"
-        pageCount={20}
+        pageCount={pageCount}
+        onPageChange={searchByPage}
         marginPagesDisplayed={1}
         pageRangeDisplayed={2}
         containerClassName="pagination justify-content-center"

@@ -4,7 +4,7 @@ import Repos from './Repos/Repos';
 import NotFound from '../NotFound/NotFound';
 import styles from './Main.module.css';
 
-function Main({ profileData, reposData }) {
+function Main({ profileData, reposData, searchByPage }) {
   return (
     <div className={styles.container}>
       {profileData.status !== 200 ? (
@@ -12,7 +12,7 @@ function Main({ profileData, reposData }) {
       ) : (
         <>
           <Profile profileData={profileData.data} />
-          <Repos profileData={profileData.data} reposData={reposData} />
+          <Repos profileData={profileData.data} reposData={reposData} searchByPage={searchByPage} />
         </>
       )}
     </div>

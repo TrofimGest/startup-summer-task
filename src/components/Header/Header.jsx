@@ -3,7 +3,7 @@ import githubLogo from '../../assets/icons/github.svg';
 import searchIcon from '../../assets/icons/search.svg';
 import styles from './Header.module.css';
 
-function Header({ username, setUsername, handleEnter }) {
+function Header({ username, setUsername, searchResult }) {
   const handleChange = (e) => {
     setUsername(e.target.value);
   };
@@ -20,7 +20,7 @@ function Header({ username, setUsername, handleEnter }) {
         <input
           type="search"
           value={username}
-          onKeyDown={handleEnter}
+          onKeyDown={searchResult}
           onChange={handleChange}
           placeholder="Enter GitHub username"
           className={styles.input}

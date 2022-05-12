@@ -15,7 +15,7 @@ export async function getUser(username) {
   return response;
 }
 
-export async function getRepos(username, currentPage = 1) {
+export async function getRepos(username, pageNum) {
   const response = await axios
     .get(`https://api.github.com/users/${username}/repos`, {
       headers: {
@@ -23,7 +23,7 @@ export async function getRepos(username, currentPage = 1) {
       },
       params: {
         per_page: 4,
-        page: currentPage
+        page: pageNum
       }
     })
     .catch((error) => {
